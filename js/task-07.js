@@ -2,6 +2,7 @@ const input = document.querySelector("#font-size-control");
 const textSpan = document.querySelector("#text");
 
 
-input.addEventListener("click", (e) => {
-  textSpan.style.fontSize = e.target.value + "px";
+input.addEventListener("input", (event) => {
+  const inputValue = event.currentTarget;
+  textSpan.style.fontSize = `${inputValue.value}px`;
 });
