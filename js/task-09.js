@@ -10,12 +10,11 @@ const refs = {
   togglebtn: document.querySelector(".change-color"),
 };
 
-refs.togglebtn.addEventListener("click", onChangeBodyColor);
 
-function onChangeBodyColor(event) {
-  if (event.currentTurget) {
-    return
-    refs.body.style.backgroundColor = getRandomHexColor();
-    refs.textSpan.textContent = refs.body.style.backgroundColor.value;
-  }
-}
+refs.togglebtn.addEventListener("click", changeBodyColor)
+
+function changeBodyColor() {
+  const color = getRandomHexColor();
+  refs.body.style.backgroundColor = color;
+  refs.textSpan.textContent = color;
+};
