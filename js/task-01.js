@@ -1,9 +1,8 @@
-const mainListItem = document.querySelectorAll(".item");
-console.log(`Number of categories: ${mainListItem.length}`);
 
-const title = document.querySelector("h2");
-console.log(`Category: ${title.textContent}`);
-
-
-const animalsList = mainListItem.querySelectorAll('li');
-console.log(`Elements: ${animalsList.length}`);
+const secondUl = document.querySelectorAll(".item");
+      
+console.log(`Number of categories:${secondUl.length}`);
+for (let i = 0; i < secondUl.length; i += 1) {
+  console.log(`Category: ${secondUl[i].querySelector("h2").textContent}`);
+  console.log(`Elements: ${secondUl[i].querySelectorAll("ul li").length}`);
+}
