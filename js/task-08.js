@@ -11,7 +11,13 @@ function formSubmit(event) {
     return alert("Будь ласка, заповніть всі дані 😉");
   }
 
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  let obj = {
+    userEmail: email.value,
+    userPassword: password.value,
+  };
+  
+  console.log(obj);
 
   event.currentTarget.reset();
 }
+
